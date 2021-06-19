@@ -1,0 +1,8 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: بِسْمِ
+  letter_count: 3
+  occurance_count: 3
+  meaning_count: 0
+  reviewed: false
