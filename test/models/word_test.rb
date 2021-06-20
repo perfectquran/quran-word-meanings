@@ -21,4 +21,10 @@ class WordTest < ActiveSupport::TestCase
   test "sanity" do
     assert @word.valid?
   end
+
+  test "self.sample" do
+    sample_word = Word.sample
+
+    assert sample_word.is_a?(Word)
+  end
 end
