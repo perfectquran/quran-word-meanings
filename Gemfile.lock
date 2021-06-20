@@ -207,6 +207,8 @@ GEM
     standard (1.1.1)
       rubocop (= 1.14.0)
       rubocop-performance (= 1.11.2)
+    tailwindcss-rails (0.3.3)
+      rails (>= 6.0.0)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -260,6 +262,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   standard (~> 1.1, >= 1.1.1)
+  tailwindcss-rails (~> 0.3.3)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
