@@ -12,4 +12,7 @@
 #  updated_at      :datetime         not null
 #
 class Word < ApplicationRecord
+  def self.sample
+    order(Arel.sql("RANDOM()")).limit(1).take
+  end
 end
