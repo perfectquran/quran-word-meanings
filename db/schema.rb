@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_20_001857) do
+ActiveRecord::Schema.define(version: 2021_06_27_132529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 2021_06_20_001857) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  create_table "word_meanings", force: :cascade do |t|
+    t.bigint "word_id", null: false
+    t.string "content", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["word_id"], name: "index_word_meanings_on_word_id"
+  end
+
   create_table "words", force: :cascade do |t|
     t.string "content"
     t.integer "letter_count"
@@ -34,4 +42,5 @@ ActiveRecord::Schema.define(version: 2021_06_20_001857) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "word_meanings", "words"
 end
